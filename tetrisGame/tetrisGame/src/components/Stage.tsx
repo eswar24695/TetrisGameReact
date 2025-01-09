@@ -1,11 +1,18 @@
 import React from 'react'
 import Cell from './Cell'
+import {StyledStage} from "./styles/StyledStage.js"
 
-const Stage:React.FC = ({stage}) => {
+type StageProps={
+    stage:[number , string][][]
+}
+
+const Stage:React.FC<StageProps> = ({stage}) => {
   return (
-    <div>
-        {stage.map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} />))}
-    </div>
+    <StyledStage width={stage[0].length} height={stage.length}>
+        {/* <Cell type='dummy'/> */}
+        {stage.map((row)=>{ return row.map((cell,cellidx)=>{ return <Cell key={cellidx} type={cell[0]}/>})})}
+
+    </StyledStage>
   )
 }
 

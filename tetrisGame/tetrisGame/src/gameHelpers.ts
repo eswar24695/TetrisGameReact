@@ -1,6 +1,6 @@
-export const STAGE_WIDTH=12;
-export const STAGE_HEIGHT=20;
+export const STAGE_WIDTH = 12;
+export const STAGE_HEIGHT = 20;
 
-export const createStage=()=>{
-    Array.from(Array(20), () => new Array(12).fill([0, "clear"]))
-}
+export const createStage = (): [number, string][][] => {
+  return Array.from({ length: STAGE_HEIGHT }, () => new Array(STAGE_WIDTH).fill([0, "clear"]));
+};

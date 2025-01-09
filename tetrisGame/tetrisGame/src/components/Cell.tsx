@@ -1,8 +1,15 @@
 import React from 'react'
+import {StyledCell} from "./styles/StyledCell.js"
+import { TETROMINUS } from '../tetrominos';
 
-const Cell:React.FC = ({type}) => {
+
+type cellProps={
+  type:string | number
+}
+
+const Cell:React.FC<cellProps> = ({type}) => {
   return (
-    <div>Cell</div>
+    <StyledCell type={type} color={TETROMINUS[type].color} />
   )
 }
 
