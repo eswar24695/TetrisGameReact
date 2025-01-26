@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyledDisplay} from "./styles/styledDisplay.js"
+import {StyledDisplay} from "./styles/styledDisplay"
 
 type displayProps={
     gameOver:boolean,

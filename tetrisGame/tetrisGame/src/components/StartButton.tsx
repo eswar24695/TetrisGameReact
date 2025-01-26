@@ -6,7 +6,7 @@ type StartProps ={
 
 const StartButton:React.FC<StartProps> = ({callback}) => {
   return (
-    <StyledStartButton>Start Game</StyledStartButton>
+    <StyledStartButton onClick={callback}>Start Game</StyledStartButton>
   )
 }
 
